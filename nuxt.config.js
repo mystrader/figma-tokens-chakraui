@@ -1,3 +1,5 @@
+import customTheme from './theme/customTheme.js'
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -47,5 +49,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  chakra: {
+    extendTheme: customTheme
+  },
 }

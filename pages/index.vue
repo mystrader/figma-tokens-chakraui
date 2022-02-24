@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <CHeading text-align="center" mt="5" mb="5"
+      >Dhuo Teste DesignSystem
+    </CHeading>
     <CBox
       v-bind="mainStyles[colorMode]"
       d="flex"
@@ -7,11 +10,18 @@
       h="100vh"
       flex-dir="column"
       justify-content="center"
+      mb="3"
     >
-      <CHeading text-align="center" mb="4">
-        ⚡️ Hello chakra-ui/vue
-      </CHeading>
-      <CFlex justify="center" direction="column" align="center">
+      <CFlex justify="start" direction="column" align="center">
+        <c-button-group :spacing="4">
+          <c-button variant-color="blue" variant="solid"> solid </c-button>
+          <c-button variant-color="blue" variant="outline"> outline </c-button>
+          <c-button variant-color="blue" variant="ghost"> ghost </c-button>
+          <c-button variant-color="blue" variant="link"> link </c-button>
+        </c-button-group>
+      </CFlex>
+
+      <!-- <CFlex justify="center" direction="column" align="center">
         <CBox mb="3">
           <CIconButton
             mr="3"
@@ -21,40 +31,11 @@
             } mode`"
             @click="toggleColorMode"
           />
-          <CButton
-            left-icon="info"
-            variant-color="blue"
-            @click="showToast"
-          >
+          <CButton left-icon="info" variant-color="blue" @click="showToast">
             Show Toast
           </CButton>
         </CBox>
-        <CAvatarGroup>
-          <CAvatar
-            name="Evan You"
-            alt="Evan You"
-            src="https://pbs.twimg.com/profile_images/1206997998900850688/cTXTQiHm_400x400.jpg"
-          >
-            <CAvatarBadge size="1.0em" bg="green.500" />
-          </CAvatar>
-          <CAvatar
-            name="Jonathan Bakebwa"
-            alt="Jonathan Bakebwa"
-            src="https://res.cloudinary.com/xtellar/image/upload/v1572857445/me_zqos4e.jpg"
-          >
-            <CAvatarBadge size="1.0em" bg="green.500" />
-          </CAvatar>
-          <CAvatar
-            name="Segun Adebayo"
-            alt="Segun Adebayo"
-            src="https://pbs.twimg.com/profile_images/1169353373012897802/skPUWd6e_400x400.jpg"
-          >
-            <CAvatarBadge size="1.0em" bg="green.500" />
-          </CAvatar>
-          <CAvatar src="pop">
-            <CAvatarBadge size="1.0em" border-color="papayawhip" bg="tomato" />
-          </CAvatar>
-        </CAvatarGroup>
+
         <CButton
           left-icon="close"
           variant-color="red"
@@ -69,9 +50,7 @@
             <CModalHeader>Are you sure?</CModalHeader>
             <CModalBody>Deleting user cannot be undone</CModalBody>
             <CModalFooter>
-              <CButton @click="showModal = false">
-                Cancel
-              </CButton>
+              <CButton @click="showModal = false"> Cancel </CButton>
               <CButton
                 margin-left="3"
                 variant-color="red"
@@ -83,7 +62,7 @@
             <CModalCloseButton @click="showModal = false" />
           </CModalContent>
         </CModal>
-      </CFlex>
+      </CFlex> -->
     </CBox>
   </div>
 </template>
